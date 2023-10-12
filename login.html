@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Apple Store!</h1>
+    </header>
+    <main>
+    <section class="login-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <form onsubmit="return validateForm()">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Please enter the email" required>
+                                    <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback">valid email</div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" id="password" name="password" required placeholder="Please enter the password" class="form-control">
+                                    <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback">valid password</div>
+                                </div>
+                                <br>
+                                <input type="submit" value="Login" class="btn btn-primary">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function validateEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function validatePassword(password) {
+        var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+        return passwordRegex.test(password);
+    }
+
+    function validateForm() {
+        var emailInput = document.getElementById('email');
+        var passwordInput = document.getElementById('password');
+
+        var email = emailInput.value;
+        var password = passwordInput.value;
+
+        var emailValid = validateEmail(email);
+        var passwordValid = validatePassword(password);
+
+        if (!emailValid) {
+            emailInput.classList.add('is-invalid');
+            emailInput.classList.remove('is-valid');
+            emailInput.nextElementSibling.textContent = 'Invalid email address';
+            return false;
+        } else {
+            emailInput.classList.remove('is-invalid');
+            emailInput.classList.add('is-valid');
+            emailInput.nextElementSibling.textContent = '';
+        }
+
+        if (!passwordValid) {
+            passwordInput.classList.add('is-invalid');
+            passwordInput.classList.remove('is-valid');
+            passwordInput.nextElementSibling.textContent = 'Password must be at least 8 characters long and contain at least one digit, one lowercase letter, and one uppercase letter.';
+            return false;
+        } else {
+            passwordInput.classList.remove('is-invalid');
+            passwordInput.classList.add('is-valid');
+            passwordInput.nextElementSibling.textContent = '';
+        }
+
+        window.location.href = 'J:\Hackathon\htmlcode.html';
+
+        return true;
+    }
+</script>
+</body>
+</html>

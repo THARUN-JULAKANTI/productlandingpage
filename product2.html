@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pro Model - Product Details</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .product-details {
+            text-align: left; 
+            margin: 20px;
+        }
+        .product-image {
+            max-width: 50%; 
+        }
+        .product-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-image:not(:last-child) {
+            margin-bottom: 35px; 
+        }
+        .product-details p {
+            font-weight: bold; 
+            font-size: 18px; 
+            text-align: left; 
+        }
+        .product-details ul {
+            font-size: 18px;
+            text-align: left;
+        }
+        .price {
+            font-size: 36px; 
+            color: #35424a; 
+        }
+        .button-container {
+            text-align: center;
+        }
+        .buy-button, .add-to-cart-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buy-button {
+            background: #35424a;
+            color: #fff;
+        }
+        .add-to-cart-button {
+            background: #5bc0de;
+            color: #fff;
+        }
+        .buy-button:hover, .add-to-cart-button:hover {
+            background: #F08B33;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul id="menu">
+                    <li><a href="file:///J:/Hackathon/htmlcode.html">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="J:\Hackathon\login.html">Login</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="product-details">
+        <div class="container">
+            <h1>Basic Model</h1>
+            <div class="product-images">
+                <img class="product-image" src="J:\Hackathon\2.jpg" alt="Product Image 4">
+                <p class="price">$699</p>
+                <div class="button-container">
+                    <a href="J:\Hackathon\buynow.html" class="buy-button">Buy Now</a>
+                    <a href="J:\Hackathon\buynow.html" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <p><strong>Product Details:</strong> Introducing the Basic Model, a simple yet powerful mobile phone that meets all your communication needs.</p>
+                <img class="product-image" src="J:\Hackathon\2-1.jpg" alt="Product Image 1">
+                <img class="product-image" src="J:\Hackathon\2-2.jpg" alt="Product Image 2">
+                <img class="product-image" src="J:\Hackathon\2-3.jpg" alt="Product Image 3">
+                
+            </div>
+            <ul>
+                <li><strong>Features:</strong></li>
+                <li>Splash, Water and Dust Resistant 3 Rated IP68 (maximum depth of 6 metres up to 30 minutes) under IEC standard 60529.</li>
+                <li>Long-lasting battery</li>
+                <li>Smooth performance</li>
+                <li>rueDepth Camera,12MP camera. </li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Apple Iphones</p>
+        </div>
+    </footer>
+</body>
+</html>

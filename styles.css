@@ -1,0 +1,101 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, label, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    background-image: ('J:\Hackathon\logback.jpg'); /* Add the background image URL here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.login-form {
+    padding: 50px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.invalid-feedback {
+    color: #d9534f;
+    display: none;
+}
+
+valid-feedback {
+    color: #5bc0de;
+    display: none;
+}
+
+button {
+    background: #35424a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #F08B33;
+}
+
+/* Media Query for small screens (e.g., smartphones) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
